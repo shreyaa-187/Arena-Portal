@@ -171,8 +171,8 @@ const esc=s=>String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 /* landing */
 'ARENA DHAN PORTAL'.split(' ').forEach((w,wi)=>{const t=$('ttl');const word=document.createElement('span');word.style.cssText='display:inline-block;margin:0 .14em';
  [...w].forEach((ch,i)=>{const s=document.createElement('span');s.textContent=ch;s.style.animationDelay=(.5+(wi*5+i)*.045)+'s';if(wi===1)s.className='g';word.appendChild(s)});t.appendChild(word)});
-for(let i=0;i<22;i++){const c=document.createElement('i'),z=26+Math.random()*34;c.className='coin';
- c.style.cssText=`left:${Math.random()*96}%;--z:${z}px;animation-duration:${6+Math.random()*6}s;animation-delay:${-Math.random()*9}s`;
+for(let i=0;i<8;i++){const c=document.createElement('i'),z=26+Math.random()*30;c.className='coin';
+ c.style.cssText=`left:${Math.random()*96}%;--z:${z}px;animation-duration:${10+Math.random()*6}s;animation-delay:${-Math.random()*14}s`;
  c.innerHTML=`<b class="sw" style="animation-delay:${-Math.random()*3}s"><b class="sp" style="animation-duration:${1.8+Math.random()*2}s"><b class="fc">₹</b></b></b>`;$('coins').appendChild(c)}
 for(let i=0;i<34;i++){const t=document.createElement('i');t.className='star';t.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${Math.random()*3}s;animation-duration:${2+Math.random()*3}s`;$('stars').appendChild(t)}
 const show=id=>['land','login','app'].forEach(x=>$(x).classList.toggle('hide',x!==id));
